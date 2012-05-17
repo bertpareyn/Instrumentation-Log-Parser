@@ -1,5 +1,6 @@
 var parserInput = "#parser_input";
 var parserInputSubmit = "#parser_input_submit";
+var parserOutput = '#parser_output';
 
 var output = {
     "name": [],
@@ -36,7 +37,7 @@ var parseStructure = function() {
     $.each(output.avgtotaltime, function(jj, avgtotaltime) {
         output.avgtotaltime[jj] = avgtotaltime / input.results.length;
     });
-    $('#parser_output').val(JSON.stringify(output));
+    $(parserOutput).val(JSON.stringify(output));
 };
 
 var addBinding = function() {
